@@ -18,3 +18,12 @@ Built for portfolio signal: React + Docker + Firebase Auth + Firestore/Storage +
 - Structured output to Firestore (line items, totals, confidence)
 - Clean React UI with results history, loading/error states
 - Fully Dockerized; deployable on Cloud Run
+
+## 📦 Tech Stack
+- **Frontend**: React, TypeScript, Fetch API
+- **Backend**: Node 20 + Express
+- **Auth**: Firebase Authentication
+- **Data**: Firestore (Native)
+- **Storage**: Cloud Storage
+- **AI**: Vertex AI — Gemini 1.5 Flash
+- **Infra**: Docker, Cloud Run, Artifact Registry, Secret Manager
