@@ -28,7 +28,7 @@ Built for portfolio signal: React + Docker + Firebase Auth + Firestore/Storage +
 - **AI**: Vertex AI — Gemini 1.5 Flash
 - **Infra**: Docker, Cloud Run, Artifact Registry, Secret Manager
 
-## 🔐 Data Model (Firestore)
+## 🔐 Data Models (Firestore)
 - `users/{uid}`
 - `receipts/{receiptId}`
   - `userId`: string
@@ -43,3 +43,15 @@ Built for portfolio signal: React + Docker + Firebase Auth + Firestore/Storage +
   - `lineItems`: Array<{ description, qty, unitPrice, amount, category?, confidence? }>
   - `dupHash`: string (perceptual hash | normalized text hash)
   - `modelMeta`: { model: "gemini-1.5-flash", promptVersion: "v1" }
+
+## 🚀 Quick Start (without Docker)
+1. **Frontend**
+   ```bash
+   cd apps/web
+   npm install
+   npm run dev
+
+2. **Backend**
+   cd apps/api
+   npm install
+   npm run dev
