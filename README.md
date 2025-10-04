@@ -38,13 +38,13 @@ Built for portfolio signal: React + Docker + Firebase Auth + Firestore/Storage +
   - `imagePath`: string
   - `merchant`: string
   - `purchaseDate`: string|timestamp
-  - `subtotal`: number
-  - `tax`: number
-  - `total`: number
+  - `subtotal`: int
+  - `tax`: int
+  - `total`: int
   - `currency`: string
-  - `lineItems`: Array<{ description, qty, unitPrice, amount, category}>
-  - `modelMeta`: { model: "gemini-1.5-flash", promptVersion: "v1" }
+  - `lineItems`: Array<{ description, qty, unitPrice, amount, category }>
 
+![db](db.png)
 <!-- ## 🚀 Quick Start (without Docker)
 1. **Frontend**
    ```bash
