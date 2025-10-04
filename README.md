@@ -9,7 +9,6 @@ Built for portfolio signal: React + Docker + Firebase Auth + Firestore/Storage +
 ![Docker](https://img.shields.io/badge/Docker-Containerized-informational)
 ![GCP](https://img.shields.io/badge/GCP-Cloud%20Run%20%7C%20Firestore%20%7C%20Storage-orange)
 ![Vertex AI](https://img.shields.io/badge/Vertex%20AI-Gemini%201.5%20Flash-purple)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 ## ✨ Features
 - Email/Google sign-in via Firebase Authentication
@@ -30,21 +29,23 @@ Built for portfolio signal: React + Docker + Firebase Auth + Firestore/Storage +
 
 ## 🔐 Data Models (Firestore)
 - `users/{uid}`
-- `receipts/{receiptId}`
-  - `userId`: string
+  - `userId`: int/pk
+  - `username`: string
   - `createdAt`: timestamp
-  - `originalImagePath`: string (gs://…)
+- `receipts/{receiptId}`
+  - `userId`: int/pk
+  - `createdAt`: timestamp
+  - `imagePath`: string
   - `merchant`: string
   - `purchaseDate`: string|timestamp
   - `subtotal`: number
   - `tax`: number
   - `total`: number
   - `currency`: string
-  - `lineItems`: Array<{ description, qty, unitPrice, amount, category?, confidence? }>
-  - `dupHash`: string (perceptual hash | normalized text hash)
+  - `lineItems`: Array<{ description, qty, unitPrice, amount, category}>
   - `modelMeta`: { model: "gemini-1.5-flash", promptVersion: "v1" }
 
-## 🚀 Quick Start (without Docker)
+<!-- ## 🚀 Quick Start (without Docker)
 1. **Frontend**
    ```bash
    cd apps/web
@@ -54,4 +55,4 @@ Built for portfolio signal: React + Docker + Firebase Auth + Firestore/Storage +
 2. **Backend**
    cd apps/api
    npm install
-   npm run dev
+   npm run dev -->
